@@ -1,14 +1,8 @@
-// Queue interface
-
-public interface Queue <E>{
-	
+public interface Queue<E>
+{
 	int size();
-	
 	boolean isEmpty();
-	
-	void enqueue(E e);
-	
-	E dequeue();
-	
+	void enque(E e);
+	E deque();
 	E first();
 }

@@ -1,40 +1,21 @@
-// Implementing linear search algorithm 
-
-import java.util.Scanner;
-
-class Search {
-	int [] a;
-	int n;
-	int key;
-	
-	void input() {
+import java.util.*;
+class LinearSearch
+{
+	public static void main(String args[])
+	{
+		int a[] = {10 , 20 , 50 , 30 , 70};
+		System.out.println("Enter key : ");
 		Scanner sc = new Scanner(System.in);
-		n = sc.nextInt();
-		a = new int [n];
-		for(int i = 0; i < n; i++) {
-			a[i] = sc.nextInt();
-		}
-		key = sc.nextInt();
+		int key = sc.nextInt();
+		System.out.println(key + "found at "+linearSearch(a, key));
 	}
-	
-	void searching() {
-		int flag = 0, count = 0;
-		while(count < n) {
-			if(a[count] == key) {
-				flag = 1;
-				System.out.println("Found at " + count);
-				break;
-			}
-			count ++;
+	public static int linearSearch(int []a , int key)
+	{
+		for(int i = 0 ; i < a.length ; i++)
+		{
+			if(a[i] == key)	return i;
+			
 		}
-		if(flag == 0) System.out.println("Not found");
-	}
-}	
-
-public class LinearSearch {		
-	public static void main(String [] args) {
-		Search n = new Search();
-		n.input();
-		n.searching();
+		return -1;
 	}
 }
