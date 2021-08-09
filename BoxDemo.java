@@ -1,26 +1,21 @@
+/*BoxDemo.java*/
+
 class Box
 {
-	 int length;
-	 int breadth;
-	 int depth;
-	 
-	 Box(int l, int b, int d){
-		 length = l;
-		 breadth = b;
-		 depth = d;
- }
-	 public String toString()
-	 {
-		return length+" x "+breadth+" x "+depth;
-	 }
+	double width;
+	double height;
+	double depth;
 }
-
-class BoxDemo
-{
-	 public static void main(String[]args)
-	 {
-		 Box box = new Box(10,15,20);
-		 System.out.println("Dimensions: "+box);
-	 }
+class BoxDemo {
+        
+    
+    public static void main(String[] args) {
+        Box mybox = new Box();
+        mybox.height = 40;
+        mybox.width = 20;
+        mybox.depth = 10;
+        double vol;
+        vol = mybox.width * mybox.height * mybox.depth;
+        System.out.println("Volume is : "+vol);
+    }
 }
-
